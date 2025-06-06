@@ -4,26 +4,26 @@ import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Alex Rivera",
-    role: "CTO, TechNova",
+    name: "Dr. Manoj Kumar",
+    role: "CEO Dream smile dental (USA)",
     content:
-      "Their software development team delivered beyond expectations. The architecture is so clean that our in-house engineers praised it immediately.",
+      "Working with this team has been a game-changer. Their professionalism, creativity, and dedication to quality truly impressed me. They not only understood our vision but transformed it into a digital experience that reflects the values of Dream Smile Dental. Highly recommended for anyone looking to take their brand to the next level.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Priya Patel",
-    role: "Product Lead, StellarBank",
+    name: "Adarsh Singh",
+    role: "Co-founder of Ayush Realtors",
     content:
-      "The mobile app they built increased our customer engagement by 200%. Flawless UX and performance even on older devices.",
+      "Partnering with this team was one of the best decisions for our real estate brand. Their ability to understand our business needs and deliver a sleek, user-friendly digital platform was truly impressive. The results speak for themselves — increased visibility, better client engagement, and a stronger online presence. We highly recommend them to any business aiming to grow digitally.",
     rating: 5,
   },
   {
     id: 3,
-    name: "James Müller",
-    role: "Director, EuroCloud",
+    name: "Ayush Singh",
+    role: "Founder: Ayush Realtors MUMBAI",
     content:
-      "Their cybersecurity audit saved us from a critical vulnerability. Now we sleep better knowing our infrastructure is secure.",
+      "The entire process was smooth and professional. From design to execution, everything was handled with precision. Our brand now has a digital identity we’re proud of. Their dedication and creative vision truly stand out.",
     rating: 4,
   },
 ];
@@ -55,7 +55,7 @@ const Testimonials: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-300">
-              Trusted by Innovators
+              Trusted by Our Clients
             </span>
           </h2>
           <p className="text-slate-300 max-w-lg mx-auto">

@@ -15,30 +15,30 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-commerce Platform",
+      title: "Punekar Interior",
       description:
-        "Full-featured online store with payment integration and inventory management.",
-      imageUrl: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      link: "https://example.com",
+        "A modern interior design project focused on aesthetics, comfort, and functional elegance — crafted to transform spaces beautifully.",
+      imageUrl: "/Interior design project 1.jpg",
+      tags: ["React", "Javascript", "Node.js", "MongoDB", "Stripe"],
+      link: "https://punekarinteriors.com/",
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "The AI-native Data Security Platform",
       description:
-        "Collaborative task management with real-time updates and team features.",
+        "Smart, fast, and adaptive — our AI-powered platform secures your data with real-time threat detection, encryption, and automated compliance",
       imageUrl: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3",
-      tags: ["TypeScript", "React", "Firebase"],
-      link: "https://example.com/task-app",
+      tags: ["TypeScript", "React", "Firebase", "JavaScript", "Tailwind CSS", "Framer Motion", "OpenAI API", "Node.js", "Express"],
+      link: "https://www.cyera.com/",
     },
     {
       id: 3,
-      title: "Health & Fitness Tracker",
+      title: "Rareplanet: Your Daily Essentials Hub",
       description:
-        "Track workouts, nutrition, and health metrics with personalized recommendations.",
-      imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
-      tags: ["React Native", "GraphQL", "Python"],
-      link: "https://example.com/fitness-tracker",
+        "Order all your home essentials in one place — from kitchen supplies to everyday household items. Fast delivery, wide variety, and hassle-free shopping right from your home!",
+      imageUrl: "/Home essentials.webp",
+      tags: ["React", "Javascript", "Node.js", "MongoDB", "Expressjs", "Stripe"],
+      link: "https://rareplanet.com/",
     },
   ];
 
@@ -77,12 +77,12 @@ const Projects = () => {
 
           <h2 className="text-4xl font-bold text-white mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-300">
-              Project Portfolio
+              See What We’ve Built.
             </span>
           </h2>
 
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            Explore our successful implementations and case studies
+            Explore how we’ve helped clients turn ideas into working products.
           </p>
         </div>
 

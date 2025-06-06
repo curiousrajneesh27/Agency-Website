@@ -62,13 +62,13 @@ const Services: React.FC = () => {
             <span className="text-sm font-medium">Our Expertise</span>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-5xl font-bold text-white mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-300">
-              Transformative Services
+              What We Offer
             </span>
           </h2>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            Digital solutions crafted to elevate your brand and business
+            Smart digital services designed to grow your brand.
           </p>
         </div>
 

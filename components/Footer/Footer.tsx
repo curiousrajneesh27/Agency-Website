@@ -115,7 +115,7 @@ const Footer: React.FC = () => {
                   <Mail className="h-5 w-5 text-cyan-400 mt-1 mr-3 flex-shrink-0" />
                   <a
                     href="mailto:codeauratechnologies@gmail.com"
-                    className="text-slate-300 hover:text-cyan-400 transition-colors text-lg"
+                    className="text-slate-300 hover:text-cyan-400 transition-colors text-base md:text-lg break-words"
                   >
                     codeauratechnologies@gmail.com
                   </a>
@@ -126,9 +126,9 @@ const Footer: React.FC = () => {
                     href="https://wa.me/9565245755"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-300 hover:text-violet-400 transition-colors text-lg"
+                    className="text-slate-300 hover:text-violet-400 transition-colors text-base md:text-lg)"
                   >
-                    +91 9565245755
+                    +91 956524575
                   </a>
                 </li>
               </ul>

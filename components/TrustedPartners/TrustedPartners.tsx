@@ -4,8 +4,8 @@ const TrustedPartners: React.FC = () => {
   const partners = [
     { name: "Company 1", logo: "/Ayush Realtors.jpg" },
     { name: "Company 2", logo: "/Dentist.png" },
-    { name: "Company 3", logo: "/R D Group.png" },
-    { name: "Company 4", logo: "/voltsec_io_logo.jpg" },
+    { name: "Company 3", logo: "/Interior design project 1.jpg" },
+    { name: "Company 4", logo: "/CYERA.png" },
   ];
 
   const scrollToContact = () => {
@@ -15,7 +15,7 @@ const TrustedPartners: React.FC = () => {
   return (
     <section
       id="partners"
-      className="relative py-24 bg-slate-900  overflow-hidden"
+      className="relative py-24 bg-slate-900 overflow-hidden"
     >
       {/* Modern Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-900/30 overflow-hidden">
@@ -40,29 +40,29 @@ const TrustedPartners: React.FC = () => {
             <span className="text-sm font-medium">Trusted Partnerships</span>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-5xl font-bold text-white mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-white">
-              Our Esteemed Partners
+              Our Trusted Partners
             </span>
           </h2>
 
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            Collaborating with industry leaders to deliver exceptional results
+            Together, we create meaningful and result-driven solutions.
           </p>
         </div>
 
-        {/* Partners grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {/* Partners grid - Updated sizing here */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="group relative p-6 rounded-xl bg-slate-800/30 border border-white/5 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/50 hover:shadow-lg hover:shadow-cyan-500/20 backdrop-blur-sm"
+              className="group relative p-4 aspect-square flex items-center justify-center rounded-xl bg-slate-800/30 border border-white/5 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/50 hover:shadow-lg hover:shadow-cyan-500/20 backdrop-blur-sm"
             >
-              <div className="flex items-center justify-center h-20">
+              <div className="flex items-center justify-center h-full w-full p-4">
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-h-16 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100"
+                  className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100"
                 />
               </div>
               <div className="absolute inset-0 rounded-xl border border-white/5 pointer-events-none"></div>
@@ -75,7 +75,7 @@ const TrustedPartners: React.FC = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-20 text-center">
+        <div className="mt-16 text-center">
           <button
             onClick={scrollToContact}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-3.5 rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30"
