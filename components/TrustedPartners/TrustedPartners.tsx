@@ -4,7 +4,7 @@ const TrustedPartners: React.FC = () => {
   const partners = [
     { name: "Company 1", logo: "/Ayush Realtors.jpg" },
     { name: "Company 2", logo: "/Dentist.png" },
-    { name: "Company 3", logo: "/Interior design project 1.jpg" },
+    { name: "Company 3", logo: "/Punekar.png" },
     { name: "Company 4", logo: "/CYERA.png" },
   ];
 
