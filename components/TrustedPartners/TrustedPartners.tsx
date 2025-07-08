@@ -2,10 +2,21 @@ import { ChevronRight, Sparkles } from "lucide-react";
 
 const TrustedPartners: React.FC = () => {
   const partners = [
-    { name: "Company 1", logo: "/Ayush Realtors.jpg" },
-    { name: "Company 2", logo: "/Dentist.png" },
-    { name: "Company 3", logo: "/Punekar.png" },
-    { name: "Company 4", logo: "/CYERA.png" },
+    { name: "Ayush Realtors", logo: "/Ayush Realtors.jpg" },
+    { name: "Dentist Clinic", logo: "/Dentist.png" },
+    { name: "Punekar Interiors", logo: "/Punekar.png" },
+    { name: "Cyera", logo: "/CYERA.png" },
+    { name: "Rare Planet", logo: "/rareplanet-logo.png" },
+    { name: "Tech Solutions", logo: "/tech-solutions.png" },
+    { name: "Green Energy", logo: "/green-energy.png" },
+    { name: "Health Plus", logo: "/health-plus.png" },
+    { name: "EduTech", logo: "/edutech-logo.png" },
+    { name: "Food Express", logo: "/food-express.png" },
+    { name: "Travel Masters", logo: "/travel-masters.png" },
+    { name: "FinTech", logo: "/fintech-logo.png" },
+    { name: "Auto Care", logo: "/auto-care.png" },
+    { name: "Fashion Hub", logo: "/fashion-hub.png" },
+    { name: "Smart Homes", logo: "/smart-homes.png" },
   ];
 
   const scrollToContact = () => {
@@ -51,27 +62,36 @@ const TrustedPartners: React.FC = () => {
           </p>
         </div>
 
-        {/* Partners grid - Updated sizing here */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="group relative p-4 aspect-square flex items-center justify-center rounded-xl bg-slate-800/30 border border-white/5 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/50 hover:shadow-lg hover:shadow-cyan-500/20 backdrop-blur-sm"
-            >
-              <div className="flex items-center justify-center h-full w-full p-4">
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100"
-                />
-              </div>
-              <div className="absolute inset-0 rounded-xl border border-white/5 pointer-events-none"></div>
-              {/* Subtle glow effect on hover */}
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                <div className="absolute inset-0 rounded-xl shadow-[inset_0_0_15px_rgba(34,211,238,0.2)]"></div>
-              </div>
+        {/* Partners horizontal scroll container */}
+        <div className="relative">
+          {/* Scrollable partners */}
+          <div className="flex overflow-x-auto pb-8 -mx-4 px-4 no-scrollbar">
+            <div className="flex space-x-6 min-w-max">
+              {partners.map((partner, index) => (
+                <div
+                  key={index}
+                  className="group relative p-4 w-48 h-48 flex-shrink-0 flex items-center justify-center rounded-xl bg-slate-800/30 border border-white/5 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/50 hover:shadow-lg hover:shadow-cyan-500/20 backdrop-blur-sm"
+                >
+                  <div className="flex items-center justify-center h-full w-full p-4">
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100"
+                    />
+                  </div>
+                  <div className="absolute inset-0 rounded-xl border border-white/5 pointer-events-none"></div>
+                  {/* Subtle glow effect on hover */}
+                  <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div className="absolute inset-0 rounded-xl shadow-[inset_0_0_15px_rgba(34,211,238,0.2)]"></div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Gradient fade effect on sides */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-900 to-transparent pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-900 to-transparent pointer-events-none"></div>
         </div>
 
         {/* CTA */}
@@ -117,6 +137,13 @@ const TrustedPartners: React.FC = () => {
         }
         .bg-diagonal-pattern {
           background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm20 20h20v20H20V20z' fill='%23ffffff' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </section>

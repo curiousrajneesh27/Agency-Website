@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { Sparkles, ChevronRight } from "lucide-react";
 
@@ -12,6 +12,8 @@ type Project = {
 };
 
 const Projects = () => {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+
   const projects: Project[] = [
     {
       id: 1,
@@ -24,6 +26,33 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: "Punekar Interior 2",
+      description:
+        "Another modern interior design project with enhanced features and improved user experience.",
+      imageUrl: "/Interior design project 1.jpg",
+      tags: ["React", "TypeScript", "Node.js", "MongoDB", "Stripe"],
+      link: "https://punekarinteriors.com/",
+    },
+    {
+      id: 3,
+      title: "Punekar Interior 3",
+      description:
+        "Premium interior design solution with 3D visualization and AR capabilities.",
+      imageUrl: "/Interior design project 1.jpg",
+      tags: ["React", "Three.js", "Node.js", "MongoDB", "AR"],
+      link: "https://punekarinteriors.com/",
+    },
+    {
+      id: 4,
+      title: "Punekar Interior 4",
+      description:
+        "E-commerce platform for interior design products with custom recommendations.",
+      imageUrl: "/Interior design project 1.jpg",
+      tags: ["React", "Next.js", "Node.js", "MongoDB", "AI"],
+      link: "https://punekarinteriors.com/",
+    },
+    {
+      id: 5,
       title: "The AI-native Data Security Platform",
       description:
         "Smart, fast, and adaptive — our AI-powered platform secures your data with real-time threat detection, encryption, and automated compliance",
@@ -32,7 +61,7 @@ const Projects = () => {
       link: "https://www.cyera.com/",
     },
     {
-      id: 3,
+      id: 6,
       title: "Rareplanet: Your Daily Essentials Hub",
       description:
         "Order all your home essentials in one place — from kitchen supplies to everyday household items. Fast delivery, wide variety, and hassle-free shopping right from your home!",
@@ -40,7 +69,45 @@ const Projects = () => {
       tags: ["React", "Javascript", "Node.js", "MongoDB", "Expressjs", "Stripe"],
       link: "https://rareplanet.com/",
     },
+    {
+      id: 7,
+      title: "EduTech Learning Platform",
+      description:
+        "Interactive online learning platform with courses, quizzes and certification.",
+      imageUrl: "/edutech.jpg",
+      tags: ["React", "Node.js", "MongoDB", "WebRTC", "Firebase"],
+      link: "#",
+    },
+    {
+      id: 8,
+      title: "Health & Fitness Tracker",
+      description:
+        "Comprehensive health monitoring app with workout plans and nutrition tracking.",
+      imageUrl: "/fitness.jpg",
+      tags: ["React Native", "Firebase", "Redux", "HealthKit"],
+      link: "#",
+    },
+    {
+      id: 9,
+      title: "Smart Home Automation",
+      description:
+        "Control your home appliances remotely with this IoT based solution.",
+      imageUrl: "/smarthome.jpg",
+      tags: ["React", "IoT", "Node.js", "MongoDB", "AWS"],
+      link: "#",
+    },
+    {
+      id: 10,
+      title: "Travel Planning App",
+      description:
+        "Plan your perfect trip with itinerary suggestions and booking integration.",
+      imageUrl: "/travel.jpg",
+      tags: ["React", "Next.js", "Node.js", "MongoDB", "Mapbox"],
+      link: "#",
+    },
   ];
+
+  const displayedProjects = showAllProjects ? projects : projects.slice(0, 3);
 
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
@@ -77,24 +144,40 @@ const Projects = () => {
 
           <h2 className="text-4xl font-bold text-white mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-300">
-              See What We’ve Built.
+              See What We've Built
             </span>
           </h2>
 
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            Explore how we’ve helped clients turn ideas into working products.
+            Explore how we've helped clients turn ideas into working products.
           </p>
         </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
+          {displayedProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
+        {/* View All / View Less Toggle */}
+        <div className="mt-12 text-center">
+          <button
+            onClick={() => setShowAllProjects(!showAllProjects)}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-95"
+            style={{
+              background: showAllProjects ? 'transparent' : 'rgba(255, 255, 255, 0.05)',
+              color: showAllProjects ? '#67e8f9' : 'white',
+              border: showAllProjects ? '1px solid rgba(103, 232, 249, 0.3)' : '1px solid rgba(255, 255, 255, 0.1)'
+            }}
+          >
+            {showAllProjects ? 'View Less' : `View All ${projects.length} Projects`}
+            <ChevronRight className={`h-5 w-5 transition-transform ${showAllProjects ? 'rotate-90' : ''}`} />
+          </button>
+        </div>
+
         {/* CTA - updated gradient */}
-        <div className="mt-20 text-center animate-fadeIn delay-200">
+        <div className="mt-12 text-center animate-fadeIn delay-200">
           <button
             onClick={scrollToContact}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-3.5 rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30"

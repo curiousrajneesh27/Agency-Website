@@ -3,6 +3,7 @@ import {
   Code,
   Linkedin,
   Instagram,
+  Twitter,
   Mail,
   MessageCircle,
   Sparkles,
@@ -55,6 +56,15 @@ const Footer: React.FC = () => {
                 aria-label="Instagram"
               >
                 <Instagram className="h-6 w-6" />
+              </a>
+              <a
+                href="https://twitter.com/https:/https://x.com/Codeauratechno"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-300 hover:text-sky-400 transition-all transform hover:scale-110"
+                aria-label="Twitter"
+              >
+                <Twitter className="h-6 w-6" />
               </a>
             </div>
           </div>

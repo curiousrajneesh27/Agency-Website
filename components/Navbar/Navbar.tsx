@@ -82,7 +82,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               } group-hover:text-cyan-300 transition-colors`}
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-300">
-                Aelsh Infotech 
+                CodeAura Technologies 
               </span>
             </span>
           </a>
